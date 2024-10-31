@@ -10,14 +10,14 @@ It uses [premake5](https://premake.github.io/) for the build system.
 
 # Build
 - Make sure you have the needed software to use [raylib](https://github.com/raysan5/raylib)
-- For linus you may need to install the needed dependancies
+- For linux you may need to install the needed dependancies
   - On Ubuntu : 
 ``` bash
 sudo apt install libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev libwayland-dev libxkbcommon-dev
 ```
 - Please consult the raylib [Wiki](https://github.com/raysan5/raylib/wiki) for more details on your specefic platform
 ## Windows : Visual Studio 2022
-- generate the solution using `generate_solution.bat` which will generate the visula studio 2022 solution files (.sln) using premake
+- Generate the solution using `generate_solution.bat` which will generate the Visual Studio 2022 solution files (.sln) using premake
 ## Linux : GNU Make
 * cd into the `build` folder
 * run `./premake5 gmake2` to generate the `MakeFile` (in the root directory)
@@ -33,7 +33,7 @@ Currently we depend on :
 - [rlImGui](https://github.com/raylib-extras/rlImGui)
 - [ImPlot](https://github.com/epezent/implot)
 
-In order to update the dependencies, just delete the `build/external` and the latest releases will be automatically donwloaded (check the functions `check_raylib` and `check_imgui` in the [premake](build/premake5.lua) file )
+In order to update the dependencies, just delete the `build/external` and the latest releases will be automatically donwloaded when generating the solution files (for example you need to run `generate_solution.bat` in Windows). For more info check the functions `check_raylib` and `check_imgui` in the [premake](build/premake5.lua) file.
 
 # Note
 - This template has been greatly inspired by [raylib-quickstart](https://github.com/raylib-extras/raylib-quickstart)
